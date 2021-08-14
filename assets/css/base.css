@@ -49,6 +49,7 @@ html{
     to{
         transform: scale(1);
     }
+
 }
 .modal{
     position:fixed;
@@ -57,20 +58,30 @@ html{
     bottom: 0;
     left: 0;
     display: flex;
-    animation: fadein linear .2s;
+    animation: fadein ease-in .05s;
+    display: none;
 }
-
+.open{
+    display: block;
+}
+.close{
+    display: none;
+}
 .modal__overlay{
     position:absolute;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.4);
+    
 }
 
 .modal__body{
-    margin: auto;
     z-index: 1; 
-    animation: growth linear 0.2s;
+    animation: fadein linear 0.2s;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50% );
 }
 
 .btn{
