@@ -8,6 +8,7 @@ var back2=document.querySelector(".auth-form__controls-back-2");
 var todangnhap=document.querySelector(".auth-form__switch-btn-to-dangnhap");
 var todangki=document.querySelector(".auth-form__switch-btn-to-dangki");
 var overlay=document.querySelector(".overlay");
+var likebtn=document.querySelector(".home-product-item__like");
 signinBtn.onclick = function() {
     modal.classList.remove("close");
     modal.classList.add("open");
@@ -42,3 +43,7 @@ overlay.onclick=function() {
     signinContainer.classList.remove("open");
     signoutContainer.classList.remove("open");
 }
+likebtn.onclick=function() {
+    likebtn.classList.toggle("home-product-item__like--liked");
+}
+
